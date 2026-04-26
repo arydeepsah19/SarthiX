@@ -24,11 +24,8 @@
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
 - [Environment Variables](#-environment-variables)
-- [Database Schema](#-database-schema)
-- [API Reference](#-api-reference)
 - [Role-Based Access](#-role-based-access)
 - [Live Tracking](#-live-tracking)
-- [Screenshots](#-screenshots)
 
 ---
 
@@ -247,42 +244,6 @@ FRONTEND_URL=http://localhost:5173
 
 ---
 
-## 🗄 Database Schema
-
-```sql
--- Users (synced from Clerk on first login)
-users          { id, clerk_id, name, email, role, avatar_url, phone_number }
-
--- Shipments
-shipments      { id, company_id, pickup_location, drop_location, distance_km,
-                 load_type, weight_kg, base_price, min_bid_price,
-                 bidding_deadline, status, assigned_driver_id }
-
--- Bids
-bids           { id, shipment_id, driver_id, bid_price, eta_hours, status }
-
--- Trips (created on delivery)
-trips          { id, shipment_id, driver_id, earning_amount, created_at }
-
--- Ratings
-ratings        { id, shipment_id, driver_id, company_id, rating, comment }
-
--- Permits
-permits        { id, driver_id, permit_type, expiry_date, status }
-
--- Vehicles
-vehicles       { id, driver_id, vehicle_number, vehicle_type,
-                 capacity_kg, document_url }
-
--- Shipment Images
-shipment_images { id, shipment_id, image_url, created_at }
-
--- Notifications
-notifications  { id, user_id, message, is_read, created_at }
-
--- Live Location (Realtime enabled)
-shipment_locations { shipment_id UNIQUE, lat, lng, updated_at }
-```
 
 ### Shipment Status Flow
 ```
@@ -292,63 +253,7 @@ open → assigned → in_transit → delivered
 
 ---
 
-## 📡 API Reference
 
-### Auth
-All routes require `Authorization: Bearer <clerk_jwt>` header.
-
-### Users
-| Method | Route | Description |
-|---|---|---|
-| POST | `/api/users/sync` | Create or update user on login |
-| POST | `/api/users/set-role` | Set driver or company role (once only) |
-| GET  | `/api/users/me` | Get current user with role |
-| PATCH | `/api/users/phone` | Update phone number |
-
-### Shipments
-| Method | Route | Description |
-|---|---|---|
-| GET  | `/api/shipments` | All open shipments (drivers — for bidding) |
-| GET  | `/api/shipments/myshipments` | Company's own shipments |
-| POST | `/api/shipments` | Post a new shipment |
-| GET  | `/api/shipments/:id` | Shipment detail with images |
-| PATCH | `/api/shipments/:id/status` | Update status (driver: in_transit, delivered) |
-| PATCH | `/api/shipments/:id/location` | Driver pushes GPS coordinates |
-| GET  | `/api/shipments/:id/location` | Get latest driver location |
-| POST | `/api/shipments/:id/images` | Upload shipment image |
-| DELETE | `/api/shipments/:id/images/:imageId` | Delete shipment image |
-| POST | `/api/shipments/:id/notify` | Notify driver (material loaded) |
-
-### Bids
-| Method | Route | Description |
-|---|---|---|
-| GET  | `/api/bids/:shipmentId` | All bids for a shipment (with driver info) |
-| POST | `/api/bids` | Place a bid |
-| POST | `/api/bids/accept` | Accept a bid (assigns driver, closes bidding) |
-
-### Driver
-| Method | Route | Description |
-|---|---|---|
-| GET  | `/api/driver/dashboard` | Stats, permits summary |
-| GET  | `/api/driver/active-shipments` | Assigned + in_transit shipments |
-| GET  | `/api/driver/bids` | Driver's bid history |
-| GET  | `/api/driver/trips` | Completed trips with earnings |
-
-### Vehicles
-| Method | Route | Description |
-|---|---|---|
-| GET  | `/api/vehicles` | Driver's vehicles |
-| POST | `/api/vehicles` | Add vehicle |
-| PATCH | `/api/vehicles/:id` | Update vehicle |
-| DELETE | `/api/vehicles/:id` | Delete vehicle |
-
-### Notifications
-| Method | Route | Description |
-|---|---|---|
-| GET  | `/api/notifications` | All notifications for current user |
-| PATCH | `/api/notifications/:id/read` | Mark notification as read |
-
----
 
 ## 👥 Role-Based Access
 
