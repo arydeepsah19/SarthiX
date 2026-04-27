@@ -160,6 +160,8 @@ sarthix/
 
 ## 🚀 Getting Started
 
+### 🚀 [Explore the Live App](https://sarthi-x-eight.vercel.app/)
+
 ### Prerequisites
 - Node.js ≥ 18
 - A [Supabase](https://supabase.com) project
