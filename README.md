@@ -175,7 +175,8 @@ sarthix/
 ## 🚀 Getting Started
 
 <div align="center">
-[Banner Image]
+[Sarthix Banner](https://img.shields.io/badge/Sarthix-Logistics%20Platform-f97316?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIwIDhIMTdWNkgzQzEuOSA2IDEgNi45IDEgOFYxN0gzQTMgMyAwIDAgMCA5IDE3SDEzQTMgMyAwIDAgMCAxOSAxN0gyMVY4SDIwWiIvPjwvc3ZnPg==)
+
 
 ### 🚀 [Explore the Live App](https://sarthi-x-eight.vercel.app/)
 </div>
