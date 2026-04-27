@@ -174,7 +174,11 @@ sarthix/
 
 ## 🚀 Getting Started
 
+<div align="center">
+[Banner Image]
+
 ### 🚀 [Explore the Live App](https://sarthi-x-eight.vercel.app/)
+</div>
 
 ### Prerequisites
 - Node.js ≥ 18
