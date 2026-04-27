@@ -15,6 +15,20 @@
 </div>
 
 ---
+## 🎓 Team Information
+* **Project Title:** SarthiX — Logistics Bidding Platform
+* **Project Type:** Copyright
+* **Submission Status:** Final Submission (Viva Ready)
+* **Supervisor:** Ajay Kumar (akumar@chitkara.edu.in)
+
+| Name | Roll Number | Role |
+| :--- | :--- | :--- |
+| **Arydeep Sah** | [2210991395] | Full-Stack Lead (System Architecture & Logic) |
+| **Ashish Kumar** | [2210991401] | Full-Stack Lead (API, DB & Integration) |
+| **Gaurav Anand** | [2210991570] | Frontend Developer (UI Components) |
+| **Harshvardhan Singh** | [2210991647] | Frontend Developer (UI Design) |
+
+---
 
 ## 📋 Table of Contents
 
