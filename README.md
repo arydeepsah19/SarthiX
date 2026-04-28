@@ -1,4 +1,4 @@
-# 🚛 Sarthix — Logistics Bidding Platform
+# 🚛 SarthiX — Logistics Bidding Platform
 
 <div align="center">
 
@@ -17,7 +17,7 @@
 ---
 ## 🎓 Team Information
 * **Project Title:** SarthiX — Logistics Bidding Platform
-* **Project Type:** Copyright
+* **Project Type:** Copyright — (Diary No.- 'SW-20192/2026-CO')
 * **Submission Status:** Final Submission (Viva Ready)
 * **Supervisor:** Ajay Kumar (akumar@chitkara.edu.in)
 
@@ -45,7 +45,7 @@
 
 ## 🌟 Overview
 
-Sarthix is a B2B logistics platform built for the Indian freight market. It enables **shippers** to post loads and receive competitive bids from **drivers**, with real-time GPS tracking, permit compliance monitoring, and a transparent rating system.
+SarthiX is a B2B logistics platform built for the Indian freight market. It enables **shippers** to post loads and receive competitive bids from **drivers**, with real-time GPS tracking, permit compliance monitoring, and a transparent rating system.
 
 ```
 Shipper posts shipment → Drivers place bids → Shipper accepts best bid
@@ -324,10 +324,10 @@ Multiple in-transit shipments are supported — a single GPS watcher pushes to a
 
 ## 📝 License
 
-MIT © 2026 Sarthix Team
+MIT © 2026 SarthiX Team
 
 ---
 
 <div align="center">
-Made with ❤️ by the Sarthix Team
+Made with ❤️ by the SarthiX Team
 </div>
